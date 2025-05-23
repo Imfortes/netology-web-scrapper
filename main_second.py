@@ -31,7 +31,7 @@ print(type(pagination_counter.text))
 print(pagination_counter.text)
 
 # for page in range(1, int(pagination_counter.text)):
-for page in tqdm(range(1, 10 + 1), desc="Парсинг страниц", unit="страница"):
+for page in tqdm(range(1, int(pagination_counter.text) + 1), desc="Парсинг страниц", unit="страница"):
 
     driver.get(f'https://habr.com/ru/articles/page{page}')
     wait_driver = WebDriverWait(driver, 10)
